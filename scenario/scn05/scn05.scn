@@ -1,0 +1,224 @@
+; $Id: scn05.scn,v 1.1 2002/06/11 21:27:00 sds Exp $
+
+[desc]
+name=16005
+story=SCENARIO_START_STORY_SCN05
+picture=scenario/scn05/scn05/scn05
+
+winstory=SCENARIO_WIN_STORY_SCN05
+winpicture=ui/scenario/win/win
+
+losestory=SCENARIO_LOSE_STORY_SCN05
+losepicture=ui/scenario/lose/lose
+
+lockedstory=SCENARIO_LOCK_STORY_0
+lockedpicture=ui/scenario/lock/lock
+
+;Icons for completion, in progress, not done
+iconf=ui/scenario/iconf/iconf
+iconc=ui/scenario/iconc/iconc
+iconp=ui/scenario/iconp/iconp
+
+[start]
+economy=scenario/scn05/economy.cfg
+savegame=maps/scn05.zoo
+setcash=50000
+addcash=0
+reset=1
+research=research.cfg
+marketing=mktg.cfg
+triggers=hideall
+triggers=avail_animals
+triggers=disableUI
+worldConfig=sounds/sea1.cfg
+
+[resume]
+triggers=hideall
+triggers=avail_animals
+triggers=disableUI
+
+[disableUI]
+trulea=2
+truleb=12
+targa=2000
+
+[2000]
+;Show Objects Tab
+id=2076
+
+[hideall]
+; Makes all animals unavailable.
+trulea=4
+truleb=7
+
+[avail_animals]
+trulea=7
+truleb=0
+targa=1000
+
+[1000]
+;Zebra
+id=5004
+;Bison
+id=5026
+;Tiger
+id=5007
+;Mexican Gray Wolf
+id=5516
+;Grizzly
+id=5016
+
+[ambients]
+;Bluejay
+id=5051
+;Seagull
+id=5053
+
+[duration]
+nummonths=3
+display=1
+text=18000
+icon=ui/scenario/clock/clock
+
+[goals]
+goal=NUM_SPECIES
+goal=EXHIBIT_SUITABILITY
+goal=ANIMAL_HAPPY
+goal=GUEST_HAPPY
+goal=DISABLE_FENCE
+goal=GAZELLE
+goal=JAVAN_RHINO
+goal=MOOSE
+goal=WARTHOG
+goal=BLACK_BEAR
+
+;Scenario objectives
+
+[NUM_SPECIES]
+;Adopt at least 6 different animal species.
+rulea=1
+ruleb=6
+type=0
+value=6
+text=17106
+
+[EXHIBIT_SUITABILITY]
+;Have an exhibit suitability rating of 75 for 3 habitats.
+rulea=6
+ruleb=0
+arga=3
+type=0
+value=75
+sticky=0
+hidden=0
+text=17600
+
+[ANIMAL_HAPPY]
+;Have an animal happiness rating of 80
+rulea=1
+ruleb=0
+type=0
+value=80
+sticky=0
+hidden=0
+text=17100
+
+[GUEST_HAPPY]
+;Have a guest happiness rating of at least 80
+rulea=1
+ruleb=1
+type=0
+value=80
+sticky=0
+hidden=0
+text=17101
+
+[DISABLE_FENCE]
+;Have an exhibit suitability rating of 75 for 3 habitats
+;Hide fence options
+rulea=6
+ruleb=0
+arga=3
+type=0
+value=75
+trulea=2
+truleb=3
+targa=3251
+sticky=0
+hidden=1
+text=17600
+
+[GAZELLE]
+;Have an exhibit suitability rating of 75 for 3 habitats
+;GAZELLE available
+rulea=6
+ruleb=0
+arga=3
+type=0
+value=75
+trulea=4
+truleb=0
+targa=5005
+sticky=0
+hidden=1
+text=17600
+
+[JAVAN_RHINO]
+;Have an exhibit suitability rating of 75 for 3 habitats
+;JAVAN_RHINO available
+rulea=6
+ruleb=0
+arga=3
+type=0
+value=75
+trulea=4
+truleb=0
+targa=5511
+sticky=0
+hidden=1
+text=17600
+
+[MOOSE]
+;Have an exhibit suitability rating of 75 for 3 habitats
+;MOOSE available
+rulea=6
+ruleb=0
+arga=3
+type=0
+value=75
+trulea=4
+truleb=0
+targa=5029
+sticky=0
+hidden=1
+text=17600
+
+[WARTHOG]
+;Have an exhibit suitability rating of 75 for 3 habitats
+;WARTHOG available
+rulea=6
+ruleb=0
+arga=3
+type=0
+value=75
+trulea=4
+truleb=0
+targa=5043
+sticky=0
+hidden=1
+text=17600
+
+[BLACK_BEAR]
+;Have an exhibit suitability rating of 75 for 3 habitats
+;BLACK_BEAR available
+rulea=6
+ruleb=0
+arga=3
+type=0
+value=75
+trulea=4
+truleb=0
+targa=5017
+sticky=0
+hidden=1
+text=17600
